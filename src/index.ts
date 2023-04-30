@@ -1,11 +1,7 @@
-import { hoge } from "@/hoge";
-
-async function callHoge() {
-  console.log(hoge);
-}
-callHoge();
+import { callHoge } from "@/hoge";
 
 async function main(): Promise<void> {
+  await callHoge();
   console.log("hello");
 }
 

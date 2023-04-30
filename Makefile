@@ -3,6 +3,9 @@
 DOCKER_IMAGE_NAME := node-template
 
 install-dependencies-by-brew:
+	cp -i .env.sample .env || :
+	brew install direnv
+	direnv allow
 	brew install volta
 	brew install act
 
@@ -13,4 +16,4 @@ docker-build:
 	docker image build -t $(DOCKER_IMAGE_NAME) .
 
 docker-run:
-	docker run -it $(DOCKER_IMAGE_NAME)
+	docker run -it $(DOCKER_IMAGE_NAME) --env-file .env

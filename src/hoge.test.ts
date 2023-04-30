@@ -1,7 +1,7 @@
-import { hoge } from "@/hoge";
+import { callHoge } from "@/hoge";
 
-describe("hoge", () => {
-  it("equal fuga", () => {
-    expect(hoge).toBe("fuga");
+describe("callHoge", () => {
+  it("equal fuga", async () => {
+    expect(await callHoge()).toBe("fuga");
   });
 });
