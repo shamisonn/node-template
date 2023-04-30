@@ -6,7 +6,7 @@ async function callHoge() {
 callHoge();
 
 async function main(): Promise<void> {
-  console.log('hello');
+  console.log("hello");
 }
 
 main();
