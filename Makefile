@@ -7,6 +7,7 @@ install-dependencies-by-brew:
 	brew install direnv
 	direnv allow
 	brew install volta
+	volta setup
 	brew install act
 
 run-actions-test:
